@@ -51,7 +51,7 @@ def test_setup_external_load_balancer():
 
 
 @pulumi.runtime.test
-def test_setup_internal_load_balancer(create_alias_mock):
+def test_setup_internal_load_balancer():
     from helpers.lb import setup_internal_load_balancer
 
     test_project_name = 'test-project-name'
@@ -73,7 +73,6 @@ def test_setup_internal_load_balancer(create_alias_mock):
     )
 
     assert lb is not None
-    create_alias_mock.assert_called_once()
 
     def check_lb(args):
         id_, tags, internal, subnets, access_logs = args

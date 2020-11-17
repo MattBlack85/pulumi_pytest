@@ -32,7 +32,6 @@ share/python-wheels/
 *.egg
 MANIFEST
 tests/template/test_rendering.py
-tests/conftest.py
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
